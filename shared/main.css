@@ -1,0 +1,64 @@
+* {
+  font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  /* default font size will be 16px */
+  font-size: 1.6rem;
+  margin: 0;
+  width: 100%;
+  background: #fff;
+  color: #222;
+}
+
+.main {
+  margin: 1rem auto;
+  width: 85%;
+}
+
+.center {
+  text-align: center;
+  margin: auto;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 100;
+}
+
+i {
+  /*   we don't want to send click events to font icons */
+  pointer-events: none;
+}
+
+
+
+
+/* Accessibility-related styling */
+.sronly,
+.skip-link:not(:focus) {
+  /* https://labs.levelaccess.com/index.php/Offscreen_Text */
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px) !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  clip-path: inset(50%) !important;
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+}
+
+a:focus,
+button:focus,
+input:focus,
+[tabindex]:focus,
+.focused {
+  outline: 2px dotted #000;
+}
