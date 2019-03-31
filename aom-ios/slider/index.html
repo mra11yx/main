@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AOM test</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+    <link rel="stylesheet" href="../../shared/main.css">
+    <link rel="stylesheet" href="slider.css">
+</head>
+
+<body>
+    <div class="main" role="main">
+        <div><a href="#">fake link</a></div>
+        <h1 class="center">ARIA slider with AOM support</h1>
+        <p>This only works if you have Accessibility Events <strong>and</strong> Accessibility Object Model support
+            turned on in your iOS settings.</p>
+        <p>If ARIA reflection is not available in your browser, this page will not work.</p>
+
+        <div id="pizzaLabel" class="slider-label">Select how many pizzas you want!</div>
+        <div data-thing="pizza" class="pizza-slider" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="10"
+            aria-valuenow="5" aria-valuetext="5 pizzas" aria-labelledby="pizzaLabel">
+            <div class="thumb" aria-hidden="true">5</div>
+        </div>
+        <h2>Focused:</h2>
+        <div id="focused"></div>
+        <h2>Action:</h2>
+        <div id="action"></div>
+        <div><a href="#">fake link</a></div>
+    </div>
+    <script src="../../shared/helpers.js"></script>
+    <script src="slider.js"></script>
+</body>
+
+</html>
