@@ -5,18 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>AOM examples</title>
+    <title>Accessibility Object Model examples</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
     <link rel="stylesheet" href="../shared/main.css">
 </head>
 
 <body>
+    <a href="#" id="skip-main" class="skip-link">Skip to main content</a>
+    <nav>
+            <ul><li><a href="http://www.mra11yx.com">Home</a></li></ul>
+        </nav>
     <div class="main" role="main">
-        <h1 class="center">AOM examples</h1>
+        <h1 class="center">Testing iOS 12.2's implementation of Accessibility Events and the Accessibility Object Model
+            (AOM)
+        </h1>
         <p>This only works if you have Accessibility Events <strong>and</strong> Accessibility Object Model support
             turned on in your iOS settings.</p>
-        <p>This page is a template. Actual examples can be found below:</p>
+        <h2>First steps:</h2>
+        <ol>
+            <li>Read up on why screen reader detection is problematic. Seriously, do this first.</li>
+            <li>Make sure that you are running iOS 12.2 or later, and that Accessibility Events are enabled. (Settings >
+                General > Accessibility > VoiceOver > Web)</li>
+            <li>Make sure that the Accessibility Object Model implementation is enabled. (Settings > Safari > Advanced >
+                Experimental Features)</li>
+        </ol>
+        <p>Note: The examples here are meant for testing purposes only. While I can pretty much guarantee that any ARIA
+            used conforms to the WAI-ARIA specification, I haven't added click, touch, or keyboard events to all of the
+            examples, as my purpose here is to isolate the functionality of Apple's AOM implementation.</p>
         <h2>Examples:</h2>
         <ul>
             <li><a href="slider/index.html">Slider</a></li>

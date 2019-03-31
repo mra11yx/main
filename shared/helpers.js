@@ -28,3 +28,18 @@ if (!Element.prototype.closest) {
         return null;
     };
 }
+
+/* Skip to content - doing this because the following don't work with VO on iOS: a) internal links and b) focus events that target elements with parallel children */
+
+if (document.getElementById("skip-main")) {
+    document.getElementById("skip-main").addEventListener("click", function (evt) {
+        evt.preventDefault(); //since I'm using a hash href and don't want the page to randomly scroll
+        var tgtHeading = queryNodes("h1")[0];
+        tgtHeading.setAttribute("tabindex", "-1");
+        tgtHeading.focus();
+    });
+}
+
+
+
+/* todo - add JS for reduced-motion media query */

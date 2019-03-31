@@ -1,6 +1,7 @@
+/* todo: reorder CSS to use Grouped by Type model https://css-tricks.com/poll-results-how-do-you-order-your-css-properties/ */
 * {
-  font-family: "Open Sans", sans-serif;
   box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
 }
 
 html {
@@ -9,11 +10,11 @@ html {
 
 body {
   /* default font size will be 16px */
+  background-color: #fff;
+  color: #222;
   font-size: 1.6rem;
   margin: 0;
   width: 100%;
-  background: #fff;
-  color: #222;
 }
 
 .main {
@@ -36,10 +37,55 @@ i {
   pointer-events: none;
 }
 
+nav {
+  border-bottom: 2px solid #000;
+  height: 5rem;
+  position: relative;
+  width: 100%;
+}
+
+nav ul {
+  height: 100%;
+  list-style-type: none;
+  margin: 0;
+  left: 0;
+  width: 100%;
+}
+
+nav li {
+  display: inline-block;
+  height: 100%;
+}
+
+nav a {
+  display: inline-block;
+  height: 100%;
+  font-size: 2rem;
+  padding: calc(1rem - 2px) 2rem;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: #222;
+  color: #fff;
+  text-decoration: underline;
+}
 
 
 
 /* Accessibility-related styling */
+.skip-link:focus {
+  background: #fff;
+  border: 2px solid #000;
+  display: inline-block;
+  left: 0;
+  padding: 1rem;
+  position: absolute;
+  top: 0;
+  z-index: 1000;
+}
+
 .sronly,
 .skip-link:not(:focus) {
   /* https://labs.levelaccess.com/index.php/Offscreen_Text */
@@ -54,6 +100,8 @@ i {
   overflow: hidden !important;
   white-space: nowrap !important;
 }
+
+
 
 a:focus,
 button:focus,

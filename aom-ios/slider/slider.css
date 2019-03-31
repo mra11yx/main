@@ -1,34 +1,35 @@
 
+/* todo: reorder CSS to use Grouped by Type model https://css-tricks.com/poll-results-how-do-you-order-your-css-properties/ */
   
   .slider-label {
     margin-bottom: 2rem;
   }
   
   .pizza-slider {
-    position: relative;
-    display: block;
-    height: 3rem;
-    width: 90%;
-    margin: auto;
     background: #555;
     border: 0.2rem solid #000;
     border-radius: 10rem;
+    display: block;
+    height: 3rem;
+    margin: auto;
+    position: relative;
+    width: 90%;
   }
   
   .pizza-slider .thumb {
     --size: 6rem;
-    position: absolute;
-    width: var(--size);
-    height: var(--size);
-    border: 1px solid #222;
-    font-size: 4rem;
-    color: #fff;
-    text-align: center;
-    border-radius: 100%;
     background: #315;
-    top: -2rem;
+    border: 1px solid #222;
+    border-radius: 100%;
+    box-shadow: 0 0 1px 1px #333;
+    color: #fff;
+    font-size: 4rem;
+    height: var(--size);
     left: calc(50% - (var(--size) / 2));
     pointer-events: none;
-    box-shadow: 0 0 1px 1px #333;
+    position: absolute;
+    text-align: center;
+    top: -2rem;
+    width: var(--size);
   }
   
